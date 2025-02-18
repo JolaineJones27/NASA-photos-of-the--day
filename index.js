@@ -21,17 +21,17 @@ function showData() {
   gridContainer.classList.remove("hidePhoto");
   console.log("working");
   for (item of dataFromApi) {
-    let pictureImage = item.url;
-    let dailyImage = document.createElement("img");
-    dailyImage.src = pictureImage;
-    gridContainer.appendChild(dailyImage);
-    console.log(dailyImage);
-
     let pictureTitle = item.title;
     let title = document.createElement("p");
     title.textContent = pictureTitle;
     gridContainer.appendChild(title);
     console.log(title);
+
+    let pictureImage = item.url;
+    let dailyImage = document.createElement("img");
+    dailyImage.src = pictureImage;
+    gridContainer.appendChild(dailyImage);
+    console.log(dailyImage);
 
     let description = item.explanation;
     let descriptionText = document.createElement("p");
@@ -72,13 +72,3 @@ document.getElementById("button2").addEventListener("click", function () {
 });
 
 // I found the above on MDN
-
-//et box = document.getElementById("boxToHide");
-//let hideBox = document.querrySelector("hideBox");
-
-//function toggleButtonClick() {
-//box.classList.toggle("hidden");
-//hideBox.classList.toggle("hide");
-//}
-
-//toggleButtonClick();
